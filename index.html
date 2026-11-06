@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MANASA MULTI SPECIALITY HOSPITAL</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f3df;
+            color: #254d3a;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #174d38;
+            color: white;
+            text-align: center;
+            padding: 24px;
+            border-bottom: 4px solid #d4af37;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin-top: 8px;
+            color: #f5e8b8;
+            font-size: 16px;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #0f392a;
+            padding: 16px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fffdf2;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* HERO */
+
+        .hero {
+
+            min-height: 620px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 60px 7%;
+
+            background:
+                linear-gradient(
+                    rgba(248,243,223,0.82),
+                    rgba(235,243,226,0.90)
+                ),
+
+                url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* MAIN CONTENT */
+
+        .hero-box {
+
+            width: 100%;
+            max-width: 1200px;
+
+            display: flex;
+            align-items: center;
+
+            gap: 50px;
+
+            padding: 35px;
+
+            background: rgba(255,255,248,0.96);
+
+            border-radius: 25px;
+
+            border: 2px solid #d4af37;
+
+            box-shadow:
+                0 15px 40px rgba(30,70,50,0.20);
+        }
+
+        /* IMAGE */
+
+        .hospital-image {
+
+            width: 55%;
+
+            position: relative;
+        }
+
+        .hospital-image img {
+
+            width: 100%;
+
+            height: 430px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 20px;
+
+            border: 6px solid white;
+
+            box-shadow:
+                0 10px 25px rgba(20,60,40,0.25);
+        }
+
+        /* HOSPITAL NAME ON IMAGE */
+
+        .hospital-name {
+
+            position: absolute;
+
+            left: 50%;
+            bottom: 25px;
+
+            transform: translateX(-50%);
+
+            width: 90%;
+
+            text-align: center;
+
+            background: rgba(15,57,42,0.92);
+
+            color: #f8e7a5;
+
+            padding: 15px 10px;
+
+            border-radius: 10px;
+
+            border: 1px solid #d4af37;
+
+            font-family: Georgia, serif;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+        }
+
+        /* WELCOME */
+
+        .welcome {
+
+            width: 45%;
+
+            padding: 15px;
+        }
+
+        .welcome-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 10px;
+        }
+
+        .welcome h2 {
+
+            font-family: Georgia, serif;
+
+            color: #174d38;
+
+            font-size: 40px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+        .welcome h2 span {
+
+            color: #b28b16;
+        }
+
+        .welcome p {
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #466052;
+
+            margin-bottom: 18px;
+        }
+
+        /* MESSAGE BOX */
+
+        .welcome-message {
+
+            background: #eef2d9;
+
+            border-left: 5px solid #d4af37;
+
+            padding: 17px;
+
+            border-radius: 8px;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+
+            color: #315341;
+        }
+
+        /* BUTTON */
+
+        .appointment-btn {
+
+            background: #174d38;
+
+            color: white;
+
+            border: 2px solid #d4af37;
+
+            padding: 13px 27px;
+
+            border-radius: 7px;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .appointment-btn:hover {
+
+            background: #d4af37;
+
+            color: #173d2d;
+
+            transform: translateY(-2px);
+        }
+
+        /* FEATURES */
+
+        .features {
+
+            padding: 70px 7%;
+
+            background: #f8f3df;
+
+            text-align: center;
+        }
+
+        .features h2 {
+
+            font-family: Georgia, serif;
+
+            color: #174d38;
+
+            font-size: 35px;
+
+            margin-bottom: 40px;
+        }
+
+        .feature-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+        }
+
+        .feature-card {
+
+            width: 245px;
+
+            background: #fffef5;
+
+            padding: 28px 20px;
+
+            border-radius: 15px;
+
+            border: 1px solid #d4af37;
+
+            box-shadow:
+                0 6px 20px rgba(30,70,50,0.12);
+
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 14px 28px rgba(30,70,50,0.18);
+        }
+
+        .feature-icon {
+
+            font-size: 42px;
+
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+
+            color: #174d38;
+
+            margin-bottom: 10px;
+
+            font-size: 21px;
+        }
+
+        .feature-card p {
+
+            color: #52675b;
+
+            line-height: 1.6;
+        }
+
+        /* SPECIALITIES */
+
+        .specialities {
+
+            padding: 70px 7%;
+
+            background: #e9f0dc;
+
+            text-align: center;
+        }
+
+        .specialities h2 {
+
+            font-family: Georgia, serif;
+
+            color: #174d38;
+
+            font-size: 35px;
+
+            margin-bottom: 40px;
+        }
+
+        .speciality-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+        }
+
+        .speciality-card {
+
+            width: 235px;
+
+            background: #fffef5;
+
+            padding: 27px;
+
+            border-radius: 15px;
+
+            border-top: 5px solid #d4af37;
+
+            box-shadow:
+                0 6px 18px rgba(30,70,50,0.12);
+        }
+
+        .speciality-card h3 {
+
+            color: #174d38;
+
+            margin-bottom: 12px;
+        }
+
+        .speciality-card p {
+
+            color: #52675b;
+
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+
+            background: #0f392a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            border-top: 4px solid #d4af37;
+        }
+
+        footer h3 {
+
+            color: #f5e5a4;
+
+            font-family: Georgia, serif;
+
+            margin-bottom: 8px;
+        }
+
+        footer p {
+
+            margin: 5px;
+
+            color: #dce7d9;
+        }
+
+        /* RESPONSIVE */
+
+        @media screen and (max-width: 850px) {
+
+            .hero-box {
+
+                flex-direction: column;
+
+                gap: 30px;
+            }
+
+            .hospital-image,
+            .welcome {
+
+                width: 100%;
+            }
+
+            .hospital-image img {
+
+                height: 330px;
+            }
+
+            .welcome {
+
+                text-align: center;
+            }
+
+            .welcome h2 {
+
+                font-size: 32px;
+            }
+
+            nav a {
+
+                display: inline-block;
+
+                margin: 7px 10px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+
+            header h1 {
+
+                font-size: 24px;
+            }
+
+            .hero {
+
+                padding: 30px 15px;
+            }
+
+            .hero-box {
+
+                padding: 15px;
+            }
+
+            .hospital-image img {
+
+                height: 260px;
+            }
+
+            .hospital-name {
+
+                font-size: 15px;
+
+                padding: 10px 5px;
+            }
+
+            .welcome h2 {
+
+                font-size: 27px;
+            }
+
+            .welcome p {
+
+                font-size: 16px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>
+            🏥 MANASA MULTI SPECIALITY HOSPITAL
+        </h1>
+
+        <p>
+            Compassionate Care • Advanced Treatment • Trusted Healthcare
+        </p>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="login.html">Login</a>
+
+        <a href="appointment.html">Appointment</a>
+
+        <a href="dashboard.html">Dashboard</a>
+
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-box">
+
+
+            <!-- YOUR IMAGE -->
+
+            <div class="hospital-image">
+
+                <img
+                    src="https://i.ibb.co/YBKL4CDZ/file-000000000de881f79b5b3fcee5da43f3.png"
+                    alt="MANASA MULTI SPECIALITY HOSPITAL">
+
+                <div class="hospital-name">
+
+                    🏥 MANASA MULTI SPECIALITY HOSPITAL
+
+                </div>
+
+            </div>
+
+
+            <!-- WELCOME -->
+
+            <div class="welcome">
+
+                <div class="welcome-icon">
+                    💚
+                </div>
+
+                <h2>
+
+                    Welcome to
+
+                    <span>
+                        Manasa Multi Speciality Hospital
+                    </span>
+
+                </h2>
+
+                <p>
+
+                    Your health and well-being are our
+                    highest priorities. We provide
+                    quality healthcare with modern
+                    facilities and compassionate
+                    medical professionals.
+
+                </p>
+
+                <div class="welcome-message">
+
+                    <strong>
+                        "Your Health Is Our First Priority."
+                    </strong>
+
+                    <br>
+
+                    We are committed to providing safe,
+                    reliable and personalized healthcare
+                    for every patient.
+
+                </div>
+
+                <button
+                    class="appointment-btn"
+                    onclick="bookAppointment()">
+
+                    📅 Book Appointment
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section class="features">
+
+        <h2>
+            Why Choose Manasa Hospital?
+        </h2>
+
+        <div class="feature-container">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    👨‍⚕️
+                </div>
+
+                <h3>
+                    Expert Doctors
+                </h3>
+
+                <p>
+                    Experienced and caring medical
+                    professionals dedicated to patient care.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🏥
+                </div>
+
+                <h3>
+                    Modern Facilities
+                </h3>
+
+                <p>
+                    Well-equipped facilities with
+                    modern medical technology.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💚
+                </div>
+
+                <h3>
+                    Patient Care
+                </h3>
+
+                <p>
+                    Personalized care and support
+                    throughout your treatment.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🚑
+                </div>
+
+                <h3>
+                    Emergency Care
+                </h3>
+
+                <p>
+                    Quick and reliable emergency
+                    medical support when needed.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- SPECIALITIES -->
+
+    <section class="specialities">
+
+        <h2>
+            Our Specialities
+        </h2>
+
+        <div class="speciality-container">
+
+
+            <div class="speciality-card">
+
+                <h3>
+                    🩺 General Medicine
+                </h3>
+
+                <p>
+                    Complete medical consultation
+                    and treatment services.
+                </p>
+
+            </div>
+
+
+            <div class="speciality-card">
+
+                <h3>
+                    ❤️ Cardiology
+                </h3>
+
+                <p>
+                    Specialized heart care and
+                    cardiovascular services.
+                </p>
+
+            </div>
+
+
+            <div class="speciality-card">
+
+                <h3>
+                    👶 Pediatrics
+                </h3>
+
+                <p>
+                    Specialized healthcare for
+                    infants and children.
+                </p>
+
+            </div>
+
+
+            <div class="speciality-card">
+
+                <h3>
+                    🚑 Emergency Care
+                </h3>
+
+                <p>
+                    Emergency medical support
+                    whenever you need it.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            🏥 MANASA MULTI SPECIALITY HOSPITAL
+        </h3>
+
+        <p>
+            Your Health Is Our First Priority.
+        </p>
+
+        <p>
+            © 2026 MANASA MULTI SPECIALITY HOSPITAL |
+            All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function bookAppointment() {
+
+            alert(
+                "Welcome to MANASA MULTI SPECIALITY HOSPITAL!\n\nPlease login to book your appointment."
+            );
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

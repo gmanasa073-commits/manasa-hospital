@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pharmacy - MANASA MULTI SPECIALITY HOSPITAL</title>
+
+<style>
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f0df;
+    color: #333;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    background: linear-gradient(135deg, #285943, #173c2c);
+    color: white;
+
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 3px solid #d4af37;
+}
+
+header h1 {
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+.hospital-icon {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    background: #173c2c;
+
+    min-height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    padding: 10px 5px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f4d35e;
+}
+
+nav a.active {
+    color: #f4d35e;
+
+    border-bottom: 3px solid #f4d35e;
+}
+
+
+/* ================= MAIN ================= */
+
+.main-section {
+
+    min-height: 850px;
+
+    padding: 40px 5%;
+
+    background:
+
+    linear-gradient(
+        rgba(245, 240, 223, 0.93),
+        rgba(245, 240, 223, 0.93)
+    ),
+
+    url("https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* ================= HEADING ================= */
+
+.page-heading {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.page-heading h2 {
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+}
+
+.gold-line {
+
+    color: #c49b20;
+
+    font-size: 22px;
+
+    margin: 8px;
+}
+
+.page-heading p {
+
+    color: #555;
+
+    font-size: 17px;
+}
+
+
+/* ================= PHARMACY INTRO ================= */
+
+.pharmacy-intro {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    background: rgba(255, 253, 247, 0.97);
+
+    border: 2px solid #d4af37;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+.pharmacy-image {
+
+    width: 380px;
+
+    height: 250px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+
+    border: 4px solid #d4af37;
+}
+
+.pharmacy-text {
+
+    flex: 1;
+}
+
+.pharmacy-text h3 {
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.pharmacy-text p {
+
+    line-height: 1.7;
+
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.section-title {
+
+    text-align: center;
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-top: 45px;
+
+    margin-bottom: 25px;
+}
+
+.service-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.service-card {
+
+    width: 250px;
+
+    background: #fffdf7;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-top: 5px solid #3b7959;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.16);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.service-icon {
+
+    width: 80px;
+
+    height: 80px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #285943;
+
+    border: 4px solid #d4af37;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+.service-card p {
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= MEDICINE SECTION ================= */
+
+.medicine-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.medicine-card {
+
+    width: 220px;
+
+    background: #fffdf7;
+
+    border: 1px solid #d4af37;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.medicine-card:hover {
+
+    transform: translateY(-5px);
+}
+
+.medicine-icon {
+
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.medicine-card h4 {
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 7px;
+}
+
+.medicine-card p {
+
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* ================= PRESCRIPTION BOX ================= */
+
+.prescription-box {
+
+    max-width: 700px;
+
+    margin: 45px auto 0;
+
+    background: #fffdf7;
+
+    border: 2px solid #d4af37;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+}
+
+.prescription-box h3 {
+
+    text-align: center;
+
+    color: #285943;
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    margin-bottom: 20px;
+}
+
+.form-group {
+
+    margin-bottom: 17px;
+}
+
+.form-group label {
+
+    display: block;
+
+    color: #285943;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group textarea {
+
+    height: 100px;
+
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #3b7959;
+
+    box-shadow:
+        0 0 5px rgba(59,121,89,0.3);
+}
+
+
+/* ================= BUTTON ================= */
+
+.pharmacy-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #3b7959,
+            #24533d
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pharmacy-button:hover {
+
+    background: #173c2c;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= SUCCESS MESSAGE ================= */
+
+#successMessage {
+
+    display: none;
+
+    background: #dff0df;
+
+    color: #246b38;
+
+    border: 1px solid #8bc48f;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+
+    background: #173c2c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 22px;
+
+    border-top: 3px solid #d4af37;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media screen and (max-width: 800px) {
+
+    header h1 {
+
+        font-size: 22px;
+
+        text-align: center;
+    }
+
+    .hospital-icon {
+
+        font-size: 28px;
+    }
+
+    nav {
+
+        gap: 12px;
+
+        padding: 12px;
+    }
+
+    nav a {
+
+        font-size: 14px;
+    }
+
+    .pharmacy-intro {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .pharmacy-image {
+
+        width: 100%;
+
+        height: 220px;
+    }
+
+    .service-card {
+
+        width: 90%;
+
+        max-width: 300px;
+    }
+
+    .medicine-card {
+
+        width: 90%;
+
+        max-width: 280px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<h1>
+
+<span class="hospital-icon">🏥</span>
+
+MANASA MULTI SPECIALITY HOSPITAL
+
+</h1>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<a href="login.html">
+👤 Login
+</a>
+
+<a href="appointment.html">
+📅 Appointment
+</a>
+
+<a href="dashboard.html">
+▦ Dashboard
+</a>
+
+<a href="pharmacy.html" class="active">
+💊 Pharmacy
+</a>
+
+<a href="contact.html">
+☎ Contact
+</a>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<section class="main-section">
+
+
+<!-- ================= PAGE HEADING ================= -->
+
+<div class="page-heading">
+
+<h2>
+💊 Hospital Pharmacy
+</h2>
+
+<div class="gold-line">
+✦ ───────────── ✦
+</div>
+
+<p>
+Safe medicines, trusted care and convenient pharmacy services
+</p>
+
+</div>
+
+
+<!-- ================= INTRO ================= -->
+
+<div class="pharmacy-intro">
+
+<img
+class="pharmacy-image"
+src="https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=900&q=85"
+alt="Hospital Pharmacy">
+
+
+<div class="pharmacy-text">
+
+<h3>
+Our Pharmacy
+</h3>
+
+<p>
+
+MANASA MULTI SPECIALITY HOSPITAL Pharmacy
+provides quality medicines and healthcare products
+for our patients.
+
+</p>
+
+<p>
+
+Our pharmacy is available to help patients obtain
+prescribed medicines conveniently after their
+doctor consultation.
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ================= PHARMACY SERVICES ================= -->
+
+<h2 class="section-title">
+Our Pharmacy Services
+</h2>
+
+
+<div class="service-container">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+💊
+</div>
+
+<h4>
+Prescription Medicines
+</h4>
+
+<p>
+Medicines are provided according to valid
+doctor prescriptions.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🧴
+</div>
+
+<h4>
+Healthcare Products
+</h4>
+
+<p>
+Personal healthcare and medical care products
+are available.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🕐
+</div>
+
+<h4>
+24/7 Emergency Support
+</h4>
+
+<p>
+Essential medicines are available for emergency
+hospital requirements.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+👨‍⚕️
+</div>
+
+<h4>
+Pharmacist Assistance
+</h4>
+
+<p>
+Our pharmacy staff can assist patients with
+prescription-related queries.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- ================= MEDICINES ================= -->
+
+<h2 class="section-title">
+Available Categories
+</h2>
+
+
+<div class="medicine-container">
+
+
+<div class="medicine-card">
+
+<div class="medicine-icon">
+💊
+</div>
+
+<h4>
+Tablets & Capsules
+</h4>
+
+<p>
+Common prescribed oral medicines.
+</p>
+
+</div>
+
+
+<div class="medicine-card">
+
+<div class="medicine-icon">
+🧴
+</div>
+
+<h4>
+Syrups
+</h4>
+
+<p>
+Liquid medicines for children and adults.
+</p>
+
+</div>
+
+
+<div class="medicine-card">
+
+<div class="medicine-icon">
+🩹
+</div>
+
+<h4>
+First Aid
+</h4>
+
+<p>
+Basic wound-care and first-aid supplies.
+</p>
+
+</div>
+
+
+<div class="medicine-card">
+
+<div class="medicine-icon">
+🧪
+</div>
+
+<h4>
+Injections
+</h4>
+
+<p>
+Hospital-use injections supplied as prescribed.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- ================= PRESCRIPTION REQUEST ================= -->
+
+<div class="prescription-box">
+
+<h3>
+📋 Prescription Assistance
+</h3>
+
+<div id="successMessage"></div>
+
+
+<form id="pharmacyForm">
+
+
+<div class="form-group">
+
+<label>
+Patient Name
+</label>
+
+<input
+type="text"
+id="patientName"
+placeholder="Enter patient name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Prescription Number
+</label>
+
+<input
+type="text"
+id="prescription"
+placeholder="Enter prescription number"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Medicine / Requirement
+</label>
+
+<textarea
+id="medicine"
+placeholder="Enter medicine name or requirement"
+required></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="pharmacy-button">
+
+💊 Submit Pharmacy Request
+
+</button>
+
+
+</form>
+
+</div>
+
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 MANASA MULTI SPECIALITY HOSPITAL
+| All Rights Reserved
+
+</p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+document
+.getElementById("pharmacyForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document
+        .getElementById("patientName")
+        .value
+        .trim();
+
+
+    const prescription =
+        document
+        .getElementById("prescription")
+        .value
+        .trim();
+
+
+    const message =
+        document
+        .getElementById("successMessage");
+
+
+    message.style.display = "block";
+
+
+    message.innerHTML =
+        "✓ Pharmacy request submitted successfully for "
+        + name
+        + ". Prescription No: "
+        + prescription
+        + ".";
+
+
+    alert(
+        "Pharmacy request submitted successfully!"
+    );
+
+
+    document
+    .getElementById("pharmacyForm")
+    .reset();
+
+});
+
+</script>
+
+
+</body>
+
+</html>

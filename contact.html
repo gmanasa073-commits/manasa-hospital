@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact - MANASA MULTI SPECIALITY HOSPITAL</title>
+
+
+    <style>
+
+        /* ================= BASIC SETTINGS ================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f0df;
+            color: #333;
+        }
+
+
+        /* ================= HEADER ================= */
+
+        header {
+
+            background: linear-gradient(
+                135deg,
+                #285943,
+                #173c2c
+            );
+
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+
+            border-bottom: 3px solid #d4af37;
+        }
+
+
+        header h1 {
+
+            font-size: 34px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .hospital-icon {
+
+            font-size: 40px;
+
+            margin-right: 10px;
+        }
+
+
+        /* ================= NAVIGATION ================= */
+
+        nav {
+
+            background: #173c2c;
+
+            padding: 15px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 40px;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            padding: 8px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            color: #f4d35e;
+        }
+
+
+        nav a.active {
+
+            color: #f4d35e;
+
+            border-bottom: 3px solid #f4d35e;
+        }
+
+
+        /* ================= CONTACT BACKGROUND ================= */
+
+        .contact-section {
+
+            min-height: 760px;
+
+            padding: 40px 5%;
+
+            position: relative;
+
+            background:
+
+                linear-gradient(
+                    rgba(245, 240, 223, 0.91),
+                    rgba(245, 240, 223, 0.91)
+                ),
+
+                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+            overflow: hidden;
+        }
+
+
+        /* ================= MEDICAL DECORATIONS ================= */
+
+        .medical-symbol {
+
+            position: absolute;
+
+            font-size: 75px;
+
+            opacity: 0.15;
+
+            color: #285943;
+
+            pointer-events: none;
+        }
+
+
+        .symbol-heart {
+
+            top: 40px;
+
+            left: 5%;
+
+            color: #b52b3a;
+        }
+
+
+        .symbol-ribbon {
+
+            top: 150px;
+
+            right: 6%;
+
+            color: #c62828;
+
+        }
+
+
+        .symbol-scissors {
+
+            bottom: 100px;
+
+            left: 5%;
+
+            color: #285943;
+        }
+
+
+        .symbol-cross {
+
+            bottom: 80px;
+
+            right: 8%;
+
+            color: #285943;
+        }
+
+
+        .symbol-heartbeat {
+
+            top: 320px;
+
+            right: 5%;
+
+            font-size: 90px;
+
+            color: #b52b3a;
+        }
+
+
+        /* ================= PAGE TITLE ================= */
+
+        .page-title {
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+
+            margin-bottom: 30px;
+        }
+
+
+        .page-title h2 {
+
+            font-family: Georgia, serif;
+
+            color: #285943;
+
+            font-size: 38px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .gold-line {
+
+            color: #c49b20;
+
+            font-size: 21px;
+
+            margin: 8px;
+        }
+
+
+        .page-title p {
+
+            color: #555;
+
+            font-size: 17px;
+        }
+
+
+        /* ================= CONTACT CONTAINER ================= */
+
+        .contact-container {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 30px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* ================= CONTACT BOX ================= */
+
+        .contact-box {
+
+            background: rgba(
+                255,
+                253,
+                247,
+                0.97
+            );
+
+            border: 2px solid #d4af37;
+
+            border-radius: 18px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 8px 25px rgba(
+                    0,
+                    0,
+                    0,
+                    0.18
+                );
+        }
+
+
+        .contact-box h3 {
+
+            color: #285943;
+
+            font-family: Georgia, serif;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+
+            border-bottom: 2px solid #d4af37;
+
+            padding-bottom: 10px;
+        }
+
+
+        /* ================= CONTACT INFORMATION ================= */
+
+        .contact-item {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 15px;
+
+            margin-bottom: 14px;
+
+            background: #f8f4e8;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        .contact-item:hover {
+
+            transform: translateX(5px);
+
+            background: #eee8d6;
+        }
+
+
+        .contact-icon {
+
+            width: 55px;
+
+            height: 55px;
+
+            min-width: 55px;
+
+            border-radius: 50%;
+
+            background: #285943;
+
+            border: 2px solid #d4af37;
+
+            color: white;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 25px;
+        }
+
+
+        .contact-item h4 {
+
+            color: #285943;
+
+            font-size: 17px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .contact-item p {
+
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.4;
+        }
+
+
+        .contact-item a {
+
+            color: #285943;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+
+        .contact-item a:hover {
+
+            color: #b28a18;
+        }
+
+
+        /* ================= CONTACT FORM ================= */
+
+        .form-group {
+
+            margin-bottom: 16px;
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            color: #285943;
+
+            font-weight: bold;
+
+            margin-bottom: 7px;
+        }
+
+
+        .form-group input,
+
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 7px;
+
+            font-size: 15px;
+
+            outline: none;
+
+            background: white;
+        }
+
+
+        .form-group textarea {
+
+            height: 130px;
+
+            resize: none;
+        }
+
+
+        .form-group input:focus,
+
+        .form-group textarea:focus {
+
+            border-color: #3b7959;
+
+            box-shadow:
+                0 0 5px rgba(
+                    59,
+                    121,
+                    89,
+                    0.3
+                );
+        }
+
+
+        /* ================= SEND BUTTON ================= */
+
+        .send-button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            background: linear-gradient(
+                135deg,
+                #3b7959,
+                #24533d
+            );
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+
+        .send-button:hover {
+
+            background: #173c2c;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ================= RED RIBBON SECTION ================= */
+
+        .health-awareness {
+
+            margin-top: 30px;
+
+            background: linear-gradient(
+                135deg,
+                #285943,
+                #173c2c
+            );
+
+            color: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border: 2px solid #d4af37;
+
+            box-shadow:
+                0 6px 18px rgba(
+                    0,
+                    0,
+                    0,
+                    0.18
+                );
+        }
+
+
+        .health-awareness .ribbon {
+
+            font-size: 55px;
+
+            color: #e53935;
+
+            margin-bottom: 5px;
+        }
+
+
+        .health-awareness h3 {
+
+            font-family: Georgia, serif;
+
+            margin-bottom: 8px;
+
+            font-size: 23px;
+        }
+
+
+        .health-awareness p {
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* ================= EMERGENCY BOX ================= */
+
+        .emergency-box {
+
+            margin-top: 30px;
+
+            background: #8b3030;
+
+            color: white;
+
+            padding: 22px;
+
+            border-radius: 13px;
+
+            text-align: center;
+        }
+
+
+        .emergency-box h3 {
+
+            font-size: 23px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .emergency-number {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            background: white;
+
+            color: #8b3030;
+
+            padding: 10px 25px;
+
+            border-radius: 7px;
+
+            font-size: 20px;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+
+        /* ================= BACK HOME ================= */
+
+        .back-home {
+
+            text-align: center;
+
+            margin-top: 30px;
+        }
+
+
+        .home-button {
+
+            display: inline-block;
+
+            background: #285943;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            border: 2px solid #d4af37;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .home-button:hover {
+
+            background: #d4af37;
+
+            color: #173c2c;
+        }
+
+
+        /* ================= SUCCESS MESSAGE ================= */
+
+        #successMessage {
+
+            display: none;
+
+            background: #dff0df;
+
+            color: #246b38;
+
+            border: 1px solid #8bc48f;
+
+            padding: 12px;
+
+            border-radius: 7px;
+
+            text-align: center;
+
+            margin-bottom: 15px;
+
+            font-weight: bold;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+
+            background: #173c2c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 22px;
+
+            border-top: 3px solid #d4af37;
+        }
+
+
+        footer .heart {
+
+            color: #e53935;
+
+            font-size: 25px;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        @media screen and (max-width: 850px) {
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+            }
+
+            .symbol-heartbeat {
+
+                display: none;
+            }
+
+        }
+
+
+        @media screen and (max-width: 600px) {
+
+            header h1 {
+
+                font-size: 23px;
+            }
+
+            .hospital-icon {
+
+                font-size: 28px;
+            }
+
+            nav {
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+            }
+
+            nav a {
+
+                font-size: 14px;
+            }
+
+            .contact-section {
+
+                padding: 25px 15px;
+            }
+
+            .page-title h2 {
+
+                font-size: 28px;
+            }
+
+            .contact-box {
+
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>
+
+            <span class="hospital-icon">🏥</span>
+
+            MANASA MULTI SPECIALITY HOSPITAL
+
+        </h1>
+
+    </header>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+        <a href="login.html">
+            👤 Login
+        </a>
+
+        <a href="appointment.html">
+            📅 Appointment
+        </a>
+
+        <a href="dashboard.html">
+            📊 Dashboard
+        </a>
+
+        <a href="contact.html" class="active">
+            ☎ Contact
+        </a>
+
+    </nav>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+
+        <!-- MEDICAL DECORATIONS -->
+
+        <div class="medical-symbol symbol-heart">
+            ♥
+        </div>
+
+        <div class="medical-symbol symbol-ribbon">
+            🎗️
+        </div>
+
+        <div class="medical-symbol symbol-scissors">
+            ✂
+        </div>
+
+        <div class="medical-symbol symbol-cross">
+            ✚
+        </div>
+
+        <div class="medical-symbol symbol-heartbeat">
+            ♥〰♥
+        </div>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <div class="gold-line">
+                ✦ ───────────── ✦
+            </div>
+
+            <p>
+                We are always here to care for you and your family.
+            </p>
+
+        </div>
+
+
+        <!-- ================= CONTACT CONTAINER ================= -->
+
+        <div class="contact-container">
+
+
+            <!-- ================= CONTACT INFORMATION ================= -->
+
+            <div class="contact-box">
+
+                <h3>
+                    📍 Hospital Information
+                </h3>
+
+
+                <!-- ADDRESS -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Hospital Address
+                        </h4>
+
+                        <p>
+                            MANASA MULTI SPECIALITY HOSPITAL<br>
+                            Kurnool, Andhra Pradesh, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Phone Number
+                        </h4>
+
+                        <p>
+
+                            <a href="tel:+919876543210">
+                                +91 98765 43210
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉️
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Email Address
+                        </h4>
+
+                        <p>
+
+                            <a href="mailto:manasahospital@gmail.com">
+                                manasahospital@gmail.com
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORKING HOURS -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        🕐
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Working Hours
+                        </h4>
+
+                        <p>
+                            Monday - Sunday<br>
+                            24 Hours Emergency Service
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMERGENCY -->
+
+                <div class="emergency-box">
+
+                    <h3>
+                        🚨 Emergency Care
+                    </h3>
+
+                    <p>
+                        For emergency medical assistance,
+                        contact us immediately.
+                    </p>
+
+                    <a
+                        href="tel:108"
+                        class="emergency-number">
+
+                        📞 108
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= CONTACT FORM ================= -->
+
+            <div class="contact-box">
+
+                <h3>
+                    💌 Send Us a Message
+                </h3>
+
+
+                <div id="successMessage">
+                    Your message has been sent successfully!
+                </div>
+
+
+                <form id="contactForm">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Enter subject"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Write your message here..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="send-button">
+
+                        ✉️ Send Message
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- ================= HEALTH AWARENESS ================= -->
+
+                <div class="health-awareness">
+
+                    <div class="ribbon">
+                        🎗️
+                    </div>
+
+                    <h3>
+                        Together for Better Health
+                    </h3>
+
+                    <p>
+                        Your health and well-being are our
+                        highest priorities. Our dedicated
+                        medical team is always ready to help.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ================= BACK HOME ================= -->
+
+        <div class="back-home">
+
+            <a
+                href="index.html"
+                class="home-button">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="heart">
+            ♥
+        </div>
+
+        <p>
+            © 2026 MANASA MULTI SPECIALITY HOSPITAL
+            | All Rights Reserved
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+
+        /* ================= CONTACT FORM ================= */
+
+        document
+            .getElementById("contactForm")
+            .addEventListener(
+                "submit",
+                function(event) {
+
+                    event.preventDefault();
+
+
+                    let name =
+                        document
+                        .getElementById("name")
+                        .value
+                        .trim();
+
+
+                    let email =
+                        document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+
+                    let phone =
+                        document
+                        .getElementById("phone")
+                        .value
+                        .trim();
+
+
+                    /* PHONE VALIDATION */
+
+                    if (!/^[0-9]{10}$/.test(phone)) {
+
+                        alert(
+                            "Please enter a valid 10-digit phone number."
+                        );
+
+                        return;
+                    }
+
+
+                    /* EMAIL VALIDATION */
+
+                    if (!email.includes("@")) {
+
+                        alert(
+                            "Please enter a valid email address."
+                        );
+
+                        return;
+                    }
+
+
+                    /* SUCCESS MESSAGE */
+
+                    let success =
+                        document
+                        .getElementById(
+                            "successMessage"
+                        );
+
+
+                    success.style.display =
+                        "block";
+
+
+                    success.innerHTML =
+                        "✓ Thank you, " +
+                        name +
+                        "! Your message has been sent successfully.";
+
+
+                    alert(
+                        "Your message has been sent successfully!"
+                    );
+
+
+                    /* RESET FORM */
+
+                    document
+                        .getElementById("contactForm")
+                        .reset();
+
+                }
+            );
+
+    </script>
+
+
+</body>
+
+</html>
